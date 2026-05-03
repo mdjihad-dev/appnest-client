@@ -1,9 +1,10 @@
 import React from 'react';
+import AllApps from '../../component/apps/AllApps';
 
 const AppsPage = () => {
     return (
         <div>
-            apps
+            <AllApps/>
         </div>
     );
 };

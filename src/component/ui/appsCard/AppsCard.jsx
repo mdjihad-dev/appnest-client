@@ -1,12 +1,13 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { MdFileDownload } from "react-icons/md";
+import { Link } from "react-router";
 
 const AppsCard = ({ apps }) => {
-  const { image, title, downloads, ratingAvg } = apps;
+  const {id, image, title, downloads, ratingAvg } = apps;
 
   return (
-    <div className="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl rounded-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
+    <Link to={`/apps/${id}`} className="group bg-white border border-gray-100 shadow-sm hover:shadow-2xl rounded-2xl transition-all duration-500 overflow-hidden hover:-translate-y-2">
       {/* ইমেজ সেকশন */}
       <div className="bg-gray-50 p-6 flex justify-center items-center overflow-hidden">
         <img
@@ -25,7 +26,7 @@ const AppsCard = ({ apps }) => {
         <div className="flex justify-center items-center gap-2 mb-5">
           <div className="flex items-center gap-1 bg-[#F1F5E8] text-green-500 px-3 py-1 rounded-full text-xs font-bold">
             <MdFileDownload className="text-sm" />
-            <span>Downloads {downloads}</span>
+            <span>{downloads}</span>
           </div>
 
           <div className="flex items-center text-[#FF8811] gap-1 bg-[#FFF0E1] px-3 py-1 rounded-full text-xs font-bold">
@@ -37,7 +38,8 @@ const AppsCard = ({ apps }) => {
           Get App
         </button>
       </div>
-    </div>
+    </Link>
+      
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { Suspense, use } from 'react';
 import AppsCard from '../../ui/appsCard/AppsCard';
+import { Link } from 'react-router';
 
 const promiseData = fetch('/data.json').then(res => res.json());
 
@@ -16,10 +17,15 @@ const TrandingApps = () => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {
-                useData.map(apps => <Suspense fallback='Lodding...'>
+                useData.slice(0, 6).map(apps => <Suspense fallback='Lodding'>
                     <AppsCard key={apps.id} apps={apps}></AppsCard>
                 </Suspense>)
             }
+        </div>
+        <div className="text-center my-5">
+            <Link to={'/apps'}>
+                <button className="btn btn-primary">Show More</button>
+            </Link>
         </div>
       </div>
     );
