@@ -1,16 +1,42 @@
-# React + Vite
+# AppNest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AppNest is a React-based web application for browsing and exploring apps through a structured, responsive interface. The project uses client-side routing to separate the main pages and app details.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- React Router
+- Tailwind CSS
+- DaisyUI
+- React Icons
+- React Loading
+- React Toastify
+- Vite
 
-## React Compiler
+## Main Routes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Home
+- Apps
+- Installation
+- App Details
 
-## Expanding the ESLint configuration
+## Highlights
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Client-side routing with React Router
+- Dynamic app detail routes
+- Responsive UI built with Tailwind CSS
+- Reusable page and layout components
+- Loading and toast feedback for user interactions
+
+## Getting Started
+
+```bash
+git clone https://github.com/mdjihad-dev/appnest-client.git
+cd appnest-client
+npm install
+npm run dev
+```
+
+## Project Focus
+
+The main focus of this project was practicing React routing, reusable components, responsive UI development, and a clean page structure for a multi-page frontend application.
